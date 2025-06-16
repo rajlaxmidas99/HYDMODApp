@@ -1,0 +1,59 @@
+﻿<Window x:Class="HYDMODApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HYDMODApp"
+        mc:Ignorable="d"
+       Title="HYDMODApp" Height="400" Width="600">
+    <DockPanel>
+        <!-- Menu bar at the top -->
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_File">
+                <MenuItem Header="New Project" Click="NewProject_Click"/>
+                <MenuItem Header="Open Project" Click="OpenProject_Click"/>
+                <MenuItem Header="Save Project" Click="SaveProject_Click"/>
+                <Separator/>
+                <MenuItem Header="Exit" Click="Exit_Click"/>
+            </MenuItem>
+            <MenuItem Header="Edit">
+                <MenuItem Header="Geometry" Click="EditGeometry_Click"/>
+                <MenuItem Header="Flow Data" Click="EditFlowData_Click"/>
+                <MenuItem Header="Boundary Conditions" Click="EditBoundaryConditions_Click"/>
+            </MenuItem>
+            <MenuItem Header="Run">
+                <MenuItem Header="Simulation" Click="RunSimulation_Click"/>
+                <MenuItem Header="Analysis" Click="RunAnalysis_Click"/>
+            </MenuItem>
+            <MenuItem Header="View">
+                <MenuItem Header="Results" Click="ViewResults_Click"/>
+                <MenuItem Header="Graphs and Tables" Click="ViewGraphsTables_Click"/>
+            </MenuItem>
+            <MenuItem Header="Options">
+                <MenuItem Header="Settings" Click="Settings_Click"/>
+                <MenuItem Header="Preferences" Click="Preferences_Click"/>
+            </MenuItem>
+            <MenuItem Header="GIS Tools">
+            </MenuItem>
+            <MenuItem Header="Help">
+            </MenuItem>
+        </Menu>
+
+        <ToolBarTray DockPanel.Dock="Top">
+            <ToolBar>
+                <Button ToolTip="Open File" Click="OpenFile_Click">
+                    <Image Source="Icons/open.png" Width="16" Height="16"/>
+                </Button>
+                <!-- You can add more buttons with tooltips -->
+            </ToolBar>
+        </ToolBarTray>
+
+        <!-- Main content -->
+        <Grid>
+            <TextBox x:Name="MainTextBox" AcceptsReturn="True" VerticalScrollBarVisibility="Auto"
+                     HorizontalScrollBarVisibility="Auto" TextWrapping="Wrap"
+                     Margin="10" />
+        </Grid>
+    </DockPanel>
+</Window>
+
