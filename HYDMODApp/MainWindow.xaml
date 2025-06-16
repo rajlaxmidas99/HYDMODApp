@@ -47,7 +47,6 @@
                 <!-- You can add more buttons with tooltips -->
             </ToolBar>
         </ToolBarTray>
-
         <!-- Main content -->
         <Grid>
             <TextBox x:Name="MainTextBox" AcceptsReturn="True" VerticalScrollBarVisibility="Auto"
